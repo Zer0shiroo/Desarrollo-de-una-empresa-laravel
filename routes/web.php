@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return redirect()->route('oficinas.index'); // Redirige automáticamente a la página de oficinas
+    return redirect()->route('oficinas.index'); 
 });
 
 Route::resource('oficinas', OficinaController::class);
