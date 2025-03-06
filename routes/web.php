@@ -9,6 +9,6 @@ Route::get('/', function () {
 });
 
 Route::resource('oficinas', OficinaController::class);
-Route::resource('oficinas.empleados', EmpleadoController::class)->shallow();  // Rutas anidadas
+Route::resource('oficinas.empleados', EmpleadoController::class)->shallow(); 
 Route::get('oficinas/{oficina}/empleados/{empleado}/edit', [EmpleadoController::class, 'edit'])->name('oficinas.empleados.edit');
 Route::put('oficinas/{oficina}/empleados/{empleado}', [EmpleadoController::class, 'update'])->name('oficinas.empleados.update');
